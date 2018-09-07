@@ -15,6 +15,9 @@ const emptyObject = {
 }
 
 const feedback = (state = emptyObject, action) => {
+    if(action.type === 'FEELING') {
+        return {...state, feeling: action.payload};
+    }
     return state;
 }
 

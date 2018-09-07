@@ -17,11 +17,13 @@ class FeelingPage extends Component {
 
     handleNextClick = (event) => {
         let action = {
-            type: 'ADD_FEEDBACK',
-            payload: this.state
+            type: 'FEELING',
+            payload: this.state.rating
         }
 
         this.props.dispatch(action);
+
+        this.props.history.push('/2');
     }
 
     render(){
