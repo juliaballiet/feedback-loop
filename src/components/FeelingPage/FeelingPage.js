@@ -18,7 +18,7 @@ class FeelingPage extends Component {
     handleNextClick = (event) => {
         let action = {
             type: 'FEELING',
-            payload: this.state.rating
+            payload: parseInt(this.state.rating)
         }
 
         this.props.dispatch(action);
