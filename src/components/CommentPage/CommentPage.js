@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Axios from 'axios';
 
 class CommentPage extends Component {
     constructor(props){
@@ -24,12 +25,22 @@ class CommentPage extends Component {
         this.props.dispatch(action);
 
         this.sendFeedbackToDatabase();
-
-        this.props.history.push('/5');
     }
 
     sendFeedbackToDatabase = () => {
+        let dataToSend = this.props.reduxState.feedback;
 
+        Axios({
+            method: 'POST',
+            url: '/feedback',
+            data: dataToSend
+        }).then((response) => {
+            console.log('back from server with: ', response);
+            this.props.history.push('/5');
+        }).catch((error) => {
+            console.log('error: ', error);
+            alert('there was an error sending the feedback');
+        })
     }
 
     render(){
