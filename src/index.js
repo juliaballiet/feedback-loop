@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
-import { Provider, applyMiddleware } from 'redux';
-import { createStore } from 'redux';
-import logger from 'logger';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
 
 const feedback = (state = {}, action) => {
     return state;
 }
 
-const storeInstance = creatStore(
+const storeInstance = createStore(
     combineReducers({feedback}),
     applyMiddleware(logger),
 );

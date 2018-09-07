@@ -11,14 +11,16 @@ import ThankYouPage from '../ThankYouPage/ThankYouPage.js';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Route exact path="/" component={FeelingPage} />
-        <Route path="/2" component={ContentPage} />
-        <Route path="/3" component={SupportPage} />
-        <Route path="/4" component={CommentPage} />
-        <Route path="/5" component={ThankYouPage} />
-      </div>
+      <Router>
+        <div className="App">
+          <Header />
+          <Route exact path="/" component={FeelingPage} />
+          <Route path="/2" component={ContentPage} />
+          <Route path="/3" component={SupportPage} />
+          <Route path="/4" component={CommentPage} />
+          <Route path="/5" component={ThankYouPage} />
+        </div>
+      </Router>
     );
   }
 }
