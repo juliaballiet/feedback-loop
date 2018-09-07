@@ -7,7 +7,14 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-const feedback = (state = {}, action) => {
+const emptyObject = {
+    feeling: 0,
+    understanding: 0,
+    support: 0,
+    comments: '',
+}
+
+const feedback = (state = emptyObject, action) => {
     return state;
 }
 

@@ -9,5 +9,13 @@
     - support
     - comment
     - thank you
-- [ ] basic set up on all views
+- [x] basic set up on all views
+
+###Pages
+- [ ] header
+- [ ] feeling
+- [ ] content
+- [ ] support
+- [ ] comment
+- [ ] thank you
 
