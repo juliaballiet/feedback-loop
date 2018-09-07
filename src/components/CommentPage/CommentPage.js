@@ -11,19 +11,15 @@ class CommentPage extends Component {
     }
 
     handleInputChange = (event) => {
-        this.setState({
-            comment: event.target.value,
-        });
-    }
-
-    handleNextClick = (event) => {
         let action = {
             type: 'COMMENTS',
-            payload: this.state.comment
+            payload: event.target.value
         }
 
         this.props.dispatch(action);
+    }
 
+    handleNextClick = (event) => {
         this.sendFeedbackToDatabase();
     }
 
