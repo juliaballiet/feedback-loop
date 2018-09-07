@@ -23,6 +23,26 @@ app.post('/feedback', (req, res) => {
     })
 })
 
+app.get('/feedback', (req, res) => {
+    const queryText = `SELECT * FROM "feedback";`;
+    pool.query(queryText).then((results) => {
+        res.send(results.rows);
+    }).catch((error) => {
+        console.log('error: ', error);
+        res.sendStatus(500);
+    })
+})
+
+app.delete('/feedback/:id', (req, res) => {
+    const queryText = `DELETE FROM "feedback" WHERE "id" = $1;`;
+    pool.query(queryText, [req.params.id]).then((results) => {
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('error: ', error);
+        res.sendStatus(500);
+    })
+})
+
 /** ---------- START SERVER ---------- **/
 app.listen(port, function () {
     console.log('Listening on port: ', port);

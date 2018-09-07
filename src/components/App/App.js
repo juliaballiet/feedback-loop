@@ -7,6 +7,7 @@ import ContentPage from '../ContentPage/ContentPage.js';
 import SupportPage from '../SupportPage/SupportPage.js';
 import CommentPage from '../CommentPage/CommentPage.js';
 import ThankYouPage from '../ThankYouPage/ThankYouPage.js';
+import AdminPage from '../AdminPage/AdminPage.js';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/3" component={SupportPage} />
           <Route path="/4" component={CommentPage} />
           <Route path="/5" component={ThankYouPage} />
+          <Route path="/admin" component={AdminPage} />
         </div>
       </Router>
     );
