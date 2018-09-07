@@ -29,7 +29,7 @@ class SupportPage extends Component {
     render(){
         return(
             <div>
-                <h3>page 1 of 4</h3>
+                <h3>page 3 of 4</h3>
                 <div>
                     <p>How well are you feeling supported?</p>
                     <br /><input onChange={this.handleInputChange}/>
