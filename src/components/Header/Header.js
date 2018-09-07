@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div>
-
+                <h1>Feedback</h1>
             </div>
         );
     }
