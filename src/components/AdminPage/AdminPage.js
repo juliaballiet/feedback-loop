@@ -9,11 +9,11 @@ class AdminPage extends Component {
         }
     }
 
-    componentDidMount() {
+    componentDidMount = () => {
         this.getFeedback();
     }
 
-    getFeedback() {
+    getFeedback = () => {
         Axios({
             method: 'GET',
             url: '/feedback'
@@ -28,7 +28,7 @@ class AdminPage extends Component {
         })
     }
 
-    deleteFeedback(event){
+    deleteFeedback = (event) => {
         Axios({
             method: 'DELETE',
             url: '/feedback/' + event.target.value
