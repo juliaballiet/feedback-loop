@@ -21,7 +21,7 @@ app.post('/feedback', (req, res) => {
         console.log('error: ', error);
         res.sendStatus(500);
     })
-})
+}) // end post route
 
 app.get('/feedback', (req, res) => {
     const queryText = `SELECT * FROM "feedback";`;
@@ -31,7 +31,7 @@ app.get('/feedback', (req, res) => {
         console.log('error: ', error);
         res.sendStatus(500);
     })
-})
+}) // end get route
 
 app.delete('/feedback/:id', (req, res) => {
     const queryText = `DELETE FROM "feedback" WHERE "id" = $1;`;
@@ -41,7 +41,7 @@ app.delete('/feedback/:id', (req, res) => {
         console.log('error: ', error);
         res.sendStatus(500);
     })
-})
+}) // end delete route
 
 /** ---------- START SERVER ---------- **/
 app.listen(port, function () {

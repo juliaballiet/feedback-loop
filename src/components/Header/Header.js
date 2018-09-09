@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
         return (
-            <div>
-                <h1>Feedback</h1>
+            <div className="Header">
+                <h1>Daily Feedback</h1>
             </div>
         );
     }

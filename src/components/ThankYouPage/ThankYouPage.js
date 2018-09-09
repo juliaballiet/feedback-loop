@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 
 class ThankYouPage extends Component {
     handleNewFeedback = (event) => {
+        // clears the feedback reducer in the redux store
         this.props.dispatch({type: 'CLEAR_FEEDBACK'});
+        // changes view to feeling page
         this.props.history.push('/');
-    }
+    } // end handleNewFeedback
 
     render(){
         return(
-            <div>
+            <div className="Component">
                 <h1>Thank you!</h1>
                 <button onClick={this.handleNewFeedback}>Leave New Feedback</button>
             </div>

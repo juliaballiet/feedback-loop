@@ -9,11 +9,13 @@ class AdminPage extends Component {
         }
     }
 
+    // calls getFeedback once component has loaded
     componentDidMount = () => {
         this.getFeedback();
-    }
+    } // end componentDidMount
 
     getFeedback = () => {
+        // gets feedback from database and displays it on the dom
         Axios({
             method: 'GET',
             url: '/feedback'
@@ -26,9 +28,10 @@ class AdminPage extends Component {
             console.log('error: ', error);
             alert('there was an problem getting the feedback');
         })
-    }
+    } // end getFeedback
 
     deleteFeedback = (event) => {
+        // deletes feedback from database using id
         Axios({
             method: 'DELETE',
             url: '/feedback/' + event.target.value
@@ -39,12 +42,12 @@ class AdminPage extends Component {
             console.log('error: ', error);
             alert('there was an problem deleting the feedback');
         })
-    }
+    } // end deleteFeedback
 
     render() {
         return (
             <div>
-                <table>
+                <table className="Table">
                     <thead>
                         <tr>
                             <th>Feeling</th>

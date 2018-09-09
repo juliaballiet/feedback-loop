@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
+
+// routes
 import Header from '../Header/Header.js';
 import FeelingPage from '../FeelingPage/FeelingPage.js';
 import ContentPage from '../ContentPage/ContentPage.js';
@@ -14,6 +16,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <style>
+            @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+          </style>
           <Header />
           <Route exact path="/" component={FeelingPage} />
           <Route path="/2" component={ContentPage} />
