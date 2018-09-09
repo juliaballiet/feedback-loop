@@ -1,60 +1,35 @@
-# Redux Feedback Loop
+# Feedback Loop
 
-> **PLEASE COMMENT YOUR CODE.** Do not clone this repository. Instead, download the zip, extract the contents, `git init`, `git add .`, `git commit -m "initial commit - base project"` and add your remote. Please do this before you leave for the day.
+An application that takes in feedback and allows an admin to view and delete the feedback.
 
-"And as always, what do I end every day with?" - Luke
+## Built With
 
+React
+Redux
+Node.js
+Express
+PostgreSQL
 
- For this assignment, you will be creating a feedback form modeled after Prime's system. Feedback will be collected over 4 views, and when all steps are complete, your app will save the feedback in the database. In a separate view, a user will be able to see all the collected feedback. 
+## Getting Started
 
-### SETUP
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Create your database and tables using the provided `data.sql` file. Start the server.
+### Installing
 
-```
-npm install
-npm run server
-```
+Steps to get the development environment running.
 
-Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
+1. Download this project.
+2. `npm install`
+3. `npm run server`
+4. `npm run client`
 
-```
-npm run client
-```
+### Completed Features
 
-### ADD NEW FEEDBACK
+- [X] Allow users to rate several catergories on a scale of one to ten
+- [X] Users can leave additional comments on their feedback
+- [X] Once users have submitted their feedback, they can start over
+- [X] Admin can view and delete all feedback left
 
-> NOTE: As a baseline requirement, you must use Redux to store your data across views.
+## Authors
 
-Create a multi-part form that allows users to leave feedback for today. 
-There will be 4 views for the form parts.
-The parts:
-- How are you feeling today?
-![feeling](wireframes/page-one.png)
-- How well are you understanding the content?
-![understanding](wireframes/page-two.png)
-- How well are you being supported?
-![support](wireframes/page-three.png)
-- Any comments you want to leave?
-![comments](wireframes/page-four.png)
-
-While there is no nav bar, each part of the form should be at its own route. Clicking next should move the user to the appropriate step in the process.
-
- When the form is complete, save the submission in the database. The user should see a submission success page.
- ![understanding](wireframes/page-five.png)
-
-### DISPLAY FEEDBACK
-
-Display all of the existing feedback at the route `/admin`. The most recently added feedback should appear at the top of the list. Allow the user to delete existing feedback. Prompt the user to confirm prior to deleting the feedback from the database.
-
-![display feedback](wireframes/admin.png)
-
-## STRETCH GOALS
-
-- Update this README.md to describe the project in your own words
-- Improve the styling of the app using Material-UI theme, cards, snackbars, buttons, nav bar, and icons, and anything else you'd like.
-- Add the ability to flag an existing feedback entry for further review on the /admin view
-- Deploy your project to Heroku -- you'll need to read the special instructions for building and deploying with these apps! 
-
-
-> NOTE: These stretch goals are intended to be completed in order.
+* Julia Balliet
