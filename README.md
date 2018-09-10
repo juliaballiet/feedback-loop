@@ -23,6 +23,10 @@ Steps to get the development environment running.
 3. `npm run server`
 4. `npm run client`
 
+### Screenshot
+
+![Screen Shot](public/images/screen_shot.png)
+
 ### Completed Features
 
 - [X] Allow users to rate several catergories on a scale of one to ten
